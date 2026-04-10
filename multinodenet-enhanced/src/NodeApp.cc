@@ -94,6 +94,7 @@ class EnhancedNode : public cSimpleModule
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
     virtual void finish() override;
+    virtual ~EnhancedNode() override;
 
     // ========== 基础消息功能 ==========
     void sendMessage();
@@ -932,6 +933,16 @@ void EnhancedNode::recordStatistics()
         simtime_t avgDelay = totalDelay / delayCount;
         recordScalar("平均延迟", avgDelay);
     }
+}
+
+// ========== 析构函数 ==========
+EnhancedNode::~EnhancedNode()
+{
+    // 清理未完成的消息缓冲
+    for (auto &pair : pendingMessages) {
+        delete pair.second.msg;
+    }
+    pendingMessages.clear();
 }
 
 // ========== 结束 ==========
