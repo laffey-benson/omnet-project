@@ -32,3 +32,15 @@ To https://github.com/laffey-benson/omnet-project.git
 To https://github.com/laffey-benson/omnet-project.git
    1ae8792..fd0d2d5  main -> main
 [2026年 04月 10日 星期五 11:10:05 CST] 成功推送到 GitHub (8 个文件)
+[main dad347e] 自动同步更新 2026-04-10 11:20
+ 8 files changed, 12 insertions(+), 1318 deletions(-)
+ delete mode 100644 smartnet/Makefile
+ delete mode 100644 "smartnet/SmartNet\347\263\273\347\273\237\350\257\264\346\230\216.md"
+ delete mode 100644 smartnet/src/SmartNet.ned
+ delete mode 100644 smartnet/src/SmartNode.cc
+ delete mode 100644 smartnet/src/SmartNode.ned
+ delete mode 100644 smartnet/src/messages.msg
+ delete mode 100644 smartnet/src/package.ned
+To https://github.com/laffey-benson/omnet-project.git
+   fd0d2d5..dad347e  main -> main
+[2026年 04月 10日 星期五 11:20:04 CST] 成功推送到 GitHub (8 个文件)
