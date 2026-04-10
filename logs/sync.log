@@ -49,3 +49,20 @@ To https://github.com/laffey-benson/omnet-project.git
 To https://github.com/laffey-benson/omnet-project.git
    dad347e..d73f4b9  main -> main
 [2026年 04月 10日 星期五 12:10:04 CST] 成功推送到 GitHub (1 个文件)
+[main 835afb5] 自动同步更新 2026-04-10 12:20
+ 13 files changed, 4097 insertions(+)
+ create mode 100755 multinodenet-enhanced/EnhancedNet
+ create mode 100644 "multinodenet-enhanced/EnhancedNet\347\263\273\347\273\237\350\257\264\346\230\216.md"
+ create mode 100644 multinodenet-enhanced/Makefile
+ create mode 100755 multinodenet-enhanced/run.sh
+ create mode 100755 multinodenet-enhanced/run_cmdenv.sh
+ create mode 100644 multinodenet-enhanced/src/EnhancedNet.ned
+ create mode 100644 multinodenet-enhanced/src/Node.ned
+ create mode 100644 multinodenet-enhanced/src/NodeApp.cc
+ create mode 100644 multinodenet-enhanced/src/messages.msg
+ create mode 100644 multinodenet-enhanced/src/messages_m.cc
+ create mode 100644 multinodenet-enhanced/src/messages_m.h
+ create mode 100644 multinodenet-enhanced/src/package.ned
+To https://github.com/laffey-benson/omnet-project.git
+   d73f4b9..835afb5  main -> main
+[2026年 04月 10日 星期五 12:20:04 CST] 成功推送到 GitHub (13 个文件)
