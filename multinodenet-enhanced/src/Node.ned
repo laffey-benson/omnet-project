@@ -19,7 +19,7 @@ simple EnhancedNode
     parameters:
         int nodeId = default(0);              // 节点唯一标识
         double dropRate = default(0.05);      // 丢包率（0-1之间）
-        volatile double sendInterval = default(1.0); // 消息发送间隔（秒）
+        volatile double sendInterval = default(1.0s); // 消息发送间隔
         int numNodes = default(4);           // 网络中节点总数
         int windowSize = default(3);          // 拥塞控制窗口大小
         int maxRetransmit = default(3);       // 最大重传次数

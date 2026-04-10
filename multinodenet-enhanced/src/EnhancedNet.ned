@@ -1,6 +1,4 @@
-//
-// EnhancedNet - 增强型多节点网络拓扑
-//
+@namespace(multinodenet_enhanced);
 // 拓扑结构：
 //              left        right
 //            ←──────       ──────→

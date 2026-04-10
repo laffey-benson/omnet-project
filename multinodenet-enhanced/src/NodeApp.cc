@@ -108,10 +108,7 @@ class EnhancedNode : public cSimpleModule
     void retransmitExpiredMessages();
 
     // ========== 拥塞控制功能 ==========
-    void initCongestionControl();
     bool canSendMessage();
-    void onMessageSent();
-    void onAckReceived();
     void adjustWindowSize(bool ackReceived);
     void decreaseWindowSize();
 
@@ -158,8 +155,6 @@ void EnhancedNode::initialize()
     heartbeatsSent = 0;
     linkFailures = 0;
     sequenceCounter = 0;
-    currentWindowSize = 3;
-    messagesInFlight = 0;
 
     // 读取基础参数
     nodeId = par("nodeId");
@@ -528,6 +523,7 @@ void EnhancedNode::checkPendingMessages()
 void EnhancedNode::retransmitExpiredMessages()
 {
     simtime_t now = simTime();
+    std::vector<int> toRemove;
 
     for (auto &pair : pendingMessages) {
         int seqNum = pair.first;
@@ -542,9 +538,8 @@ void EnhancedNode::retransmitExpiredMessages()
                 EV << "[节点" << nodeId << "] 消息 #" << seqNum
                    << " 重传次数超限，放弃\n";
                 messagesDropped++;
-                delete pending.msg;
-                pendingMessages.erase(seqNum);
                 messagesInFlight--;
+                toRemove.push_back(seqNum);
                 continue;
             }
 
@@ -555,24 +550,28 @@ void EnhancedNode::retransmitExpiredMessages()
                << " 超时未收到ACK，进行第 " << pending.retransmitCount
                << " 次重传\n";
 
-            // 创建重传消息
             EnhancedNetMsg *retransMsg = pending.msg->dup();
             retransMsg->setRetransmission(true);
 
-            // 获取目的节点并发送
             int destNode = retransMsg->getDestNode();
             int nextNode = getNextHop(destNode);
             sendToDirection(nextNode, retransMsg);
 
-            // 更新发送时间
             pending.sendTime = now;
 
-            // 拥塞控制：超时，减少窗口
             if (enableCongestionControl) {
                 decreaseWindowSize();
             }
 
             recordScalar("重传次数", messagesRetransmitted);
+        }
+    }
+
+    for (int seqNum : toRemove) {
+        auto it = pendingMessages.find(seqNum);
+        if (it != pendingMessages.end()) {
+            delete it->second.msg;
+            pendingMessages.erase(it);
         }
     }
 }
