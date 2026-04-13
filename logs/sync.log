@@ -167,3 +167,7 @@ To https://github.com/laffey-benson/omnet-project.git
 To https://github.com/laffey-benson/omnet-project.git
    0c54532..66e2bb1  main -> main
 [2026年 04月 10日 星期五 17:20:03 CST] 成功推送到 GitHub (1 个文件)
+[main 058064e] 自动同步: logs/sync.log,
+ 1 file changed, 5 insertions(+)
+fatal: could not read Username for 'https://github.com': 没有那个设备或地址
+[2026年 04月 13日 星期一 16:00:04 CST] 推送失败
