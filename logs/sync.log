@@ -190,3 +190,7 @@ fatal: 无法访问 'https://github.com/laffey-benson/omnet-project.git/'：Recv
  1 file changed, 4 insertions(+)
 fatal: 无法访问 'https://github.com/laffey-benson/omnet-project.git/'：gnutls_handshake() failed: The TLS connection was non-properly terminated.
 [2026年 04月 16日 星期四 13:10:07 CST] 推送失败
+[main 3d32069] 自动同步: logs/sync.log,
+ 1 file changed, 4 insertions(+)
+fatal: 无法访问 'https://github.com/laffey-benson/omnet-project.git/'：Recv failure: 连接被对方重置
+[2026年 04月 16日 星期四 13:20:06 CST] 推送失败
