@@ -182,3 +182,7 @@ To https://github.com/laffey-benson/omnet-project.git
 To https://github.com/laffey-benson/omnet-project.git
    f035560..941e6cb  main -> main
 [2026年 04月 13日 星期一 16:20:04 CST] 成功推送到 GitHub (2 个文件)
+[main 3a65d7c] 自动同步: logs/sync.log,
+ 1 file changed, 6 insertions(+)
+fatal: 无法访问 'https://github.com/laffey-benson/omnet-project.git/'：Recv failure: 连接被对方重置
+[2026年 04月 16日 星期四 13:00:06 CST] 推送失败
