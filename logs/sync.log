@@ -296,3 +296,7 @@ fatal: 无法访问 'https://github.com/laffey-benson/omnet-project.git/'：Fail
 To https://github.com/laffey-benson/omnet-project.git
    8d614b6..85541cf  main -> main
 [2026年 04月 16日 星期四 20:30:06 CST] 成功推送到 GitHub (1 个文件)
+[main b7c83ee] 自动同步: logs/sync.log,
+ 1 file changed, 5 insertions(+)
+fatal: 无法访问 'https://github.com/laffey-benson/omnet-project.git/'：GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+[2026年 04月 16日 星期四 20:40:21 CST] 推送失败
