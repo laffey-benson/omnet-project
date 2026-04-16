@@ -256,3 +256,7 @@ To https://github.com/laffey-benson/omnet-project.git
 To https://github.com/laffey-benson/omnet-project.git
    f5df8a6..4a8f37e  main -> main
 [2026年 04月 16日 星期四 15:40:05 CST] 成功推送到 GitHub (1 个文件)
+[main e55da80] 自动同步: logs/sync.log,
+ 1 file changed, 5 insertions(+)
+fatal: 无法访问 'https://github.com/laffey-benson/omnet-project.git/'：gnutls_handshake() failed: The TLS connection was non-properly terminated.
+[2026年 04月 16日 星期四 15:50:06 CST] 推送失败
